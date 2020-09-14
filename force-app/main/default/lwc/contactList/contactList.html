@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Hello">
+    <div class="slds-var-p-horizontal_small">
+      <template if:true={contacts.data}>
+        <template for:each={contacts.data} for:item="contact">
+          <p key={contact.Id}>{contact.FirstName}</p>
+        </template>
+      </template>
+
+      <template if:true={contacts.error}>
+        Handle Error
+      </template>
+    </div>
+    <p slot="footer">Copy right information</p>
+  </lightning-card>
+</template>
